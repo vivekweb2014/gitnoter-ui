@@ -1,58 +1,63 @@
-## GitNoter Frontend Module
-This is the frontend module of gitnoter application.
+<p align="center">
+  <a href="https://gitnoter.com">
+    <img src="https://raw.githubusercontent.com/vivekweb2013/gitnoter/main/public/logo.svg" width="100">
+  </a>
 
-### Build the frontend module
+  <p align="center">
+    Create and store notes to your git repository!
+    <br>
+    <a href="https://gitnoter.com"><strong>https://gitnoter.com</strong></a>
+  </p>
+</p>
 
-The following commands are used to build this frontend module.
+## GitNoter
+
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vivekweb2013/gitnoter/Test/main?color=forestgreen)](https://github.com/vivekweb2013/gitnoter/actions?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/vivekweb2013/gitnoter/branch/main/graph/badge.svg?token=P40BDKYDBI)](https://codecov.io/gh/vivekweb2013/gitnoter)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/dca601a2e8dd40e682ed260eca85a5ab)](https://www.codacy.com/gh/vivekweb2013/gitnoter/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vivekweb2013/gitnoter&amp;utm_campaign=Badge_Grade)
+
+[GitNoter](https://gitnoter.com) is a web application that allows users to store notes in their git repository.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vivekweb2013/gitnoter/main/public/demo/demo-gitnoter-720p.gif" alt="GitNoter Demo"/>
+</p>
+
+### Features
+-   Login with GitHub.
+-   Create, edit, delete, organize & explore notes easily with a nice & clean user interface.
+-   Markdown format supported allowing users to add hyperlink, table, headings, code blocks, blockquote... etc inside notes.
+-   Editor allows preview of markdown.
+-   Quickly copy code from the code section using copy to clipboard button.
+-   Store notes directly at the root or use folders to organize them (nesting supported).
+-   Explore all the notes from a specific directory with single click.
+-   All the notes are stored inside user's github repository.
+-   Notes are cached to avoid additional API calls.
+-   URLs can be bookmarked.
+
+### Local Development Setup
+
+#### Prerequisites
+*   Node.js version `18` or above
+
+#### Start the server
 ```shell
 npm install
-npm run build
-```
-
-### Running the frontend module locally
-
-Before starting the frontend app, please make sure that you have either started the backend module locally or pointed the frontend to staging api-server using proxy configuration.
-
-If you are working only on the frontend changes and do not want to start the backend module locally, you can point the frontend app to staging server for API access.
-
-To point frontend app to the staging api-server, Simply create `.env.development.local` file at the root of the frontend module with below contents.
-```shell
-REACT_APP_PROXY_API_URL=https://gitnoter-staging.herokuapp.com
-```
-
-Then start the frontend react app with below command.
-```shell
 npm start
 ```
-This will start the react app in the development mode.
+This will start the react app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### Analyzing the bundle size
-Source map explorer analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
-
-Run below command to generate the report.
+#### Run tests
 ```shell
-npm run analyze
+npm test
 ```
+This will execute all the tests and also prints the code coverage percentage.
 
-### Create production build
-```shell
-npm run build
-```
+### Contribution Guidelines
+> Every Contribution Makes a Difference
 
-This will create the production build of application in the `build` folder.
-It correctly bundles application in production mode and optimizes the build for the best performance.
+Read the [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
-### Run the production build of frontend module
-When you do `npm start` the app is started in development mode.
+### Contributors
+Thanks goes to these wonderful people 🎉
 
-If you have built the app and you want to run the app in production mode (i.e.from build directory), 
-Install `serve` and start the app using below commands
-```shell
-npm install serve -g
-npm run build
-serve -s build
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![](https://opencollective.com/gitnoter/contributors.svg?width=890&button=false)](https://github.com/vivekweb2013/gitnoter/graphs/contributors)
